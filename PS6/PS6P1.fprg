@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ivano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 10:13:14 PM"/>
+        <attribute name="created" value="SXZhbm87TEFQVE9QLTkxTFZITTNOOzIwMjMtMTAtMDg7MDY6NDQ6MTAgUE07MjgzOQ=="/>
+        <attribute name="edited" value="SXZhbm87TEFQVE9QLTkxTFZITTNOOzIwMjMtMTAtMDg7MTA6MTM6MTQgUE07MjsyOTQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Num" type="Integer" array="False" size=""/>
+            <assign variable="Num" expression="1"/>
+            <while expression="Num &lt;= 25">
+                <output expression="Num" newline="True"/>
+                <assign variable="Num" expression="Num + 2"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
