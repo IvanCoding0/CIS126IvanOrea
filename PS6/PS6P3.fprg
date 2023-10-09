@@ -4,21 +4,27 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Ivano"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-10-08 05:58:30 PM"/>
+        <attribute name="saved" value="2023-10-09 12:00:22 AM"/>
         <attribute name="created" value="SXZhbm87TEFQVE9QLTkxTFZITTNOOzIwMjMtMTAtMDg7MDU6NDg6NTcgUE07Mjg1Mw=="/>
-        <attribute name="edited" value="SXZhbm87TEFQVE9QLTkxTFZITTNOOzIwMjMtMTAtMDg7MDU6NTg6MzAgUE07MTsyOTUz"/>
+        <attribute name="edited" value="SXZhbm87TEFQVE9QLTkxTFZITTNOOzIwMjMtMTAtMDk7MTI6MDA6MjIgQU07MjsyOTI2"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="Response" type="String" array="False" size=""/>
             <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="Counter" type="Integer" array="False" size=""/>
+            <declare name="TotalEx1" type="Real" array="False" size=""/>
+            <assign variable="TotalEx1" expression="0"/>
+            <declare name="AverageEx1" type="Real" array="False" size=""/>
+            <assign variable="Counter" expression="0"/>
             <declare name="Score1" type="Real" array="False" size=""/>
             <declare name="Score2" type="Real" array="False" size=""/>
             <declare name="Average" type="Real" array="False" size=""/>
             <output expression="&quot;Do you want to computer your average score? (Yes or No) &quot;" newline="True"/>
             <input variable="Response"/>
             <while expression="Response == &quot;Yes&quot;">
+                <assign variable="Counter" expression="Counter + 1"/>
                 <output expression="&quot;Enter student last name &quot;" newline="True"/>
                 <input variable="LastName"/>
                 <output expression="&quot;Enter score of exam 1 &quot;" newline="True"/>
@@ -26,10 +32,14 @@
                 <output expression="&quot;Enter score of exam 2 &quot;" newline="True"/>
                 <input variable="Score2"/>
                 <assign variable="Average" expression="(Score1 + Score2) / 2"/>
+                <assign variable="TotalEx1" expression="TotalEx1 + Score1"/>
                 <output expression="&quot;Student &quot; &amp;LastName &amp; &quot; has average of &quot; &amp;Average" newline="True"/>
                 <output expression="&quot;Do you want to computer your average score? (Yes or No) &quot;" newline="True"/>
                 <input variable="Response"/>
             </while>
+            <output expression="&quot;Total number of students &quot; &amp;Counter" newline="True"/>
+            <assign variable="AverageEx1" expression="TotalEx1 / Counter"/>
+            <output expression="&quot;Average Exam score 1 is &quot; &amp;AverageEx1" newline="True"/>
         </body>
     </function>
 </flowgorithm>
